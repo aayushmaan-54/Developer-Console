@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    padding: 1em;
+    min-height: 100vh;
+    max-width: 100vw;
+    color: lightgreen;
+    font: 1.3rem Inconsolata, monospace;
+    font-weight: bold;
+    text-shadow: 0 0 5px green;
+    background: repeating-linear-gradient(transparent, transparent 2px, #3E3E3E 3px, #3E3E3E 3px);
+    background-color: black;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+  
+
+::selection {
+    color: black;
+    text-shadow: none;
+    background: lightgreen;
+}
+
+
+main {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.console-history {
+    flex-grow: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+
+.console-log-input,
+.console-log-output {
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.03);
+    }
+}
+
+
+.console-log-output {
+    color: limegreen;
+}
+
+
+.console-input {
+    flex-shrink: 0;
+    outline: none;
+    border: none;
+    border-top: 1px solid #333;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05)
+}
